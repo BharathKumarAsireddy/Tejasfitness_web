@@ -5,9 +5,9 @@ import ScrollReveal from './ScrollReveal'
 
 const credentials = [
   { icon: '🏆', title: 'NASM Certified', desc: 'Personal Trainer & Nutritionist' },
-  { icon: '📊', title: '500+ Clients', desc: 'Transformed worldwide' },
+  { icon: '📊', title: '45-50 Clients', desc: 'Transformed worldwide' },
   { icon: '🎓', title: 'Sports Science', desc: 'BSc Exercise Physiology' },
-  { icon: '⭐', title: '8+ Years', desc: 'Professional coaching experience' },
+  { icon: '⭐', title: '6+ Years', desc: 'Professional coaching experience' },
 ]
 
 export default function About() {
@@ -33,14 +33,14 @@ export default function About() {
             <div className="about-badge-card">
               <div className="about-badge-icon">🏆</div>
               <div className="about-badge-text">
-                <h4>500+</h4>
+                <h4>45-50</h4>
                 <p>Lives Transformed</p>
               </div>
             </div>
 
             {/* Floating tag — top right */}
             <div className="about-float-tag">
-              <strong>8+</strong>
+              <strong>6+</strong>
               <span>Years Exp.</span>
             </div>
 
@@ -67,7 +67,7 @@ export default function About() {
             </h2>
 
             <p className="about-bio">
-              I&apos;m Tejas — a certified personal trainer and nutrition coach with over 8 years of
+              I&apos;m Tejas — a certified personal trainer and nutrition coach with over 6 years of
               experience helping people build the body and mindset they&apos;ve always dreamed of.
               My approach blends cutting-edge sports science with practical strategies that fit
               real life.

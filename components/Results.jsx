@@ -44,10 +44,10 @@ const testimonials = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Clients Transformed' },
+  { number: '45-50', label: 'Clients Transformed' },
   { number: '98%', label: 'Success Rate' },
   { number: '4.9★', label: 'Average Rating' },
-  { number: '8+', label: 'Years Coaching' },
+  { number: '6+', label: 'Years Coaching' },
 ]
 
 export default function Results() {
@@ -66,25 +66,27 @@ export default function Results() {
           </p>
         </div>
 
-        {/* Testimonials */}
-        <div className="testimonials-grid">
-          {testimonials.map((t, i) => (
-            <div className="testimonial-card" key={i}>
-              <div className="testimonial-stars">
-                {Array.from({ length: t.stars }).map((_, j) => (
-                  <span key={j}>★</span>
-                ))}
-              </div>
-              <p className="testimonial-text">{t.text}</p>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar">{t.initial}</div>
-                <div className="testimonial-info">
-                  <h4>{t.name}</h4>
-                  <p>{t.result}</p>
+        {/* Testimonials — left-to-right marquee */}
+        <div className="testimonials-scroll-wrapper">
+          <div className="testimonials-track">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <div className="testimonial-card" key={i}>
+                <div className="testimonial-stars">
+                  {Array.from({ length: t.stars }).map((_, j) => (
+                    <span key={j}>★</span>
+                  ))}
+                </div>
+                <p className="testimonial-text">{t.text}</p>
+                <div className="testimonial-author">
+                  <div className="testimonial-avatar">{t.initial}</div>
+                  <div className="testimonial-info">
+                    <h4>{t.name}</h4>
+                    <p>{t.result}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Stats Bar */}

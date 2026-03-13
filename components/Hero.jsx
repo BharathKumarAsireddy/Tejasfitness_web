@@ -49,14 +49,14 @@ export default function Hero() {
             <div className="hero-stats">
               <div className="hero-stat">
                 <div className="hero-stat-number">
-                  500<span className="stat-accent">+</span>
+                  45<span className="stat-accent">-50</span>
                 </div>
                 <div className="hero-stat-label">Clients Transformed</div>
               </div>
               <div className="hero-stat-divider" />
               <div className="hero-stat">
                 <div className="hero-stat-number">
-                  8<span className="stat-accent">+</span>
+                  5<span className="stat-accent">+</span>
                 </div>
                 <div className="hero-stat-label">Years Experience</div>
               </div>

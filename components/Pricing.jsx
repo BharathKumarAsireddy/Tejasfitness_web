@@ -1,3 +1,9 @@
+'use client'
+
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+
 const plans = [
   {
     name: 'Foundation Plan',
@@ -17,6 +23,7 @@ const plans = [
     ],
     featured: false,
     cta: 'Get Started',
+    href: '/foundation-plan',
   },
   {
     name: "The Coach's Edge",
@@ -36,10 +43,23 @@ const plans = [
     ],
     featured: true,
     cta: 'Start Now',
+    href: '#contact',
   },
 ]
 
 export default function Pricing() {
+  const router = useRouter()
+  const [selected, setSelected] = useState(null)
+
+  const handleSelect = (plan) => {
+    setSelected(plan.name)
+    if (plan.name === 'Foundation Plan') {
+      router.push('/foundation-plan')
+    } else {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="pricing section-padding" id="pricing">
       <div className="container">
@@ -58,8 +78,10 @@ export default function Pricing() {
         <div className="pricing-grid">
           {plans.map((plan, i) => (
             <div
-              className={`pricing-card${plan.featured ? ' featured' : ''}`}
+              className={`pricing-card${plan.featured ? ' featured' : ''}${selected === plan.name ? ' plan-selected' : ''}`}
               key={i}
+              onClick={() => handleSelect(plan)}
+              style={{ cursor: 'pointer' }}
             >
               {plan.featured && (
                 <div className="featured-badge">Most Popular</div>
@@ -86,12 +108,28 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <a
-                href="#contact"
-                className={`btn ${plan.featured ? 'btn-primary' : 'btn-outline'} plan-cta`}
-              >
-                {plan.cta} →
-              </a>
+              {/* Checkbox selector */}
+              <label className="plan-checkbox-label" onClick={() => handleSelect(plan)}>
+                <span className={`plan-checkbox${selected === plan.name ? ' checked' : ''}`}>
+                  {selected === plan.name ? '✓' : ''}
+                </span>
+                <span className="plan-checkbox-text">
+                  {selected === plan.name ? 'Plan Selected' : 'Select this plan'}
+                </span>
+              </label>
+
+              {plan.name === 'Foundation Plan' ? (
+                <Link href="/foundation-plan" className="btn btn-outline plan-cta">
+                  {plan.cta} →
+                </Link>
+              ) : (
+                <a
+                  href="#contact"
+                  className={`btn ${plan.featured ? 'btn-primary' : 'btn-outline'} plan-cta`}
+                >
+                  {plan.cta} →
+                </a>
+              )}
             </div>
           ))}
         </div>

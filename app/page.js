@@ -1,9 +1,9 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Programs from '@/components/Programs'
-import FitnessGallery from '@/components/FitnessGallery'
 import About from '@/components/About'
 import Results from '@/components/Results'
+import InstagramSection from '@/components/InstagramSection'
 import Pricing from '@/components/Pricing'
 import CTASection from '@/components/CTASection'
 import Contact from '@/components/Contact'
@@ -16,9 +16,9 @@ export default function Home() {
       <main>
         <Hero />
         <Programs />
-        <FitnessGallery />
         <About />
         <Results />
+        <InstagramSection />
         <Pricing />
         <CTASection />
         <Contact />

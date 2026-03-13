@@ -3,8 +3,8 @@
 import { useState } from 'react'
 
 const contactDetails = [
-  { icon: '📧', title: 'Email Us', value: 'coach@tejasfitness.com' },
-  { icon: '📱', title: 'WhatsApp', value: '+1 (555) 123-4567' },
+  { icon: '📧', title: 'Email Us', value: 'mangalateja7@gmail.com' },
+  { icon: '📱', title: 'WhatsApp', value: '+91 9908768039' },
   { icon: '📍', title: 'Location', value: 'Worldwide Online Coaching' },
   { icon: '⏰', title: 'Response Time', value: 'Within 24 hours' },
 ]

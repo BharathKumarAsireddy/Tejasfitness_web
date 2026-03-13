@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="container">
           {/* Logo */}
           <a href="#home" className="navbar-logo" onClick={(e) => scrollTo(e, 'home')}>
-            <Image src={tfLogo} alt="Tejas Fitness" width={44} height={44} className="navbar-logo-img" priority />
+            <Image src={tfLogo} alt="Tejas Fitness" width={52} height={52} className="navbar-logo-img" priority />
           </a>
 
           {/* Desktop Nav Links */}

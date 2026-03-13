@@ -8,6 +8,7 @@ const programs = [
   {
     img: strengthImg,
     imgAlt: 'Strength training — dumbbell curl',
+    imgPos: 'center center',
     icon: '💪',
     title: 'Strength Training',
     description:
@@ -22,6 +23,7 @@ const programs = [
   {
     img: nutritionImg,
     imgAlt: 'Nutrition coaching — fit physique',
+    imgPos: 'center top',
     icon: '🥗',
     title: 'Nutrition Coaching',
     description:
@@ -36,6 +38,7 @@ const programs = [
   {
     img: transformImg,
     imgAlt: 'Body transformation — barbell squat',
+    imgPos: 'center top',
     icon: '🔥',
     title: 'Body Transformation',
     description:
@@ -50,6 +53,7 @@ const programs = [
   {
     img: onlineImg,
     imgAlt: 'Online coaching — lat pulldown',
+    imgPos: 'center center',
     icon: '📱',
     title: 'Online Coaching',
     description:
@@ -87,7 +91,7 @@ export default function Programs() {
                   src={program.img}
                   alt={program.imgAlt}
                   fill
-                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  style={{ objectFit: 'cover', objectPosition: program.imgPos }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   quality={80}
                 />
